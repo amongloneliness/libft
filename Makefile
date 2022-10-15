@@ -98,8 +98,8 @@
 NAME := libft.a
 CFLAGS := ${CFLAGS} -Wall -Wextra -Werror -c
 CC := gcc
-SRCS := ../libft/srcs/
-HEADER := -I ../libft/includes/
+SRCS := srcs/
+HEADER := -I includes/
 CFILES := ft_atoi.c \
 		ft_bzero.c \
 		ft_calloc.c \
