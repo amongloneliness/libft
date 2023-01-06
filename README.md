@@ -1,4 +1,4 @@
----
+***
 ### Описание
 Репозиторий содержит библиотеку переписанных функций для работы с памятью и строками.
 Список функций и их описание: **libft.h**.
@@ -20,4 +20,4 @@ You can install https://chocolatey.org/install to use the **make** command in **
 
 To do this, use:
 > **choco install make**
----
+***
