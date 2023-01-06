@@ -8,6 +8,8 @@
 Для этого воспользуйтесь:
 > **choco install make**
 
+---
+
 ### Description
 The repository contains rewritten functions for working with memory and strings.
 List of functions and their description: **libft_en.h**.
