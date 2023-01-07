@@ -20,3 +20,12 @@ You can install https://chocolatey.org/install to use the **make** command in **
 
 To do this, use:
 > **choco install make**
+
+#
+
+## Тестирование / Testing
+В папке **test** содержатся файлы тестирования работы функций библиотеки **libft**.
+Для компиляции программы тестирования достаточно воспользоваться следующей командой:
+The **test** folder contains files for testing the operation of the functions of the **libft** library.
+To compile the test program, just use the following command:
+> **сс ft_test.c libft.a libtest.a**
