@@ -24,6 +24,7 @@ To do this, use:
 #
 
 ## Тестирование / Testing
+**[в Linux]**
 В папке **test** содержатся файлы тестирования работы функций библиотеки **libft**.
 Для компиляции программы тестирования достаточно воспользоваться следующей командой:
 *The **test** folder contains files for testing the operation of the functions of the **libft** library.
