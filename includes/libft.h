@@ -190,7 +190,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 */
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 /*
-** Iterates the list lst and applies the f function to the contents of each element.
+** Iterates the list lst and applies the f function
+** to the contents of each element.
 */
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 /*
