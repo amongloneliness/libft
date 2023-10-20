@@ -9,6 +9,11 @@
 Для этого воспользуйтесь:
 > **choco install make**
 
+Полный список команд:
+> **make **
+> **make all**    - собрпеппа все
+> **make clean**  - удалить *.o файлы
+> **make fclean** - удалить *.o файлы и libft.a 
 ---
 
 ### Description
