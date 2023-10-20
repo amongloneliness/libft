@@ -8,13 +8,13 @@ char	*ft_strdup(const char *s)
 	int		l;
 	char	*t;
 
-	if (s == (const char *) 0)
+	if (s == (char *) 0)
 	{
 		return ((char *) 0);
 	}
 	l = (int) ft_strlen(s);
 	t = (char *) malloc(l + 1);
-	ft_memcpy((void *) t, (const void *) s, (size_t) l);
+	ft_memcpy((void *) t, (void *) s, (size_t) l);
 	t[l] = '\0';
 	return (t);
 }

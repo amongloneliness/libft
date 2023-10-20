@@ -10,35 +10,50 @@ CFLAGS := ${CFLAGS} -Wall -Wextra -Werror -c
 CC := gcc
 SRCS := srcs/
 HEADER := -I includes/
-CFILES := ft_memset.c	\
-		ft_strrchr.c	\
-		ft_bzero.c		\
-		ft_strnstr.c	\
-		ft_memcpy.c		\
-		ft_strncmp.c	\
-		ft_memccpy.c	\
-		ft_atoi.c		\
-		ft_memmove.c	\
-		ft_isalpha.c	\
-		ft_memchr.c		\
-		ft_isdigit.c	\
-		ft_memcmp.c		\
-		ft_isalnum.c	\
-		ft_strlen.c		\
-		ft_isascii.c	\
-		ft_strlcpy.c	\
-		ft_isprint.c 	\
-		ft_strlcat.c	\
-		ft_toupper.c	\
-		ft_strchr.c		\
-		ft_tolower.c	\
-		ft_calloc.c		\
-		ft_strdup.c		\
-		ft_substr.c		\
-		ft_strjoin.c	\
-		ft_strtrim.c	\
-		ft_split.c		\
-		ft_itoa.c
+CFILES := ft_memset.c			\
+		ft_strrchr.c			\
+		ft_bzero.c				\
+		ft_strnstr.c			\
+		ft_memcpy.c				\
+		ft_strncmp.c			\
+		ft_memccpy.c			\
+		ft_atoi.c				\
+		ft_memmove.c			\
+		ft_isalpha.c			\
+		ft_memchr.c				\
+		ft_isdigit.c			\
+		ft_memcmp.c				\
+		ft_isalnum.c			\
+		ft_strlen.c				\
+		ft_isascii.c			\
+		ft_strlcpy.c			\
+		ft_isprint.c 			\
+		ft_strlcat.c			\
+		ft_toupper.c			\
+		ft_strchr.c				\
+		ft_tolower.c			\
+		ft_calloc.c				\
+		ft_strdup.c				\
+		ft_substr.c				\
+		ft_strjoin.c			\
+		ft_strtrim.c			\
+		ft_split.c				\
+		ft_itoa.c				\
+		ft_strmapi.c			\
+		ft_putchar_fd.c			\
+		ft_putstr_fd.c			\
+		ft_putendl_fd.c			\
+		ft_putnbr_fd.c			\
+		lst/ft_lstnew.c			\
+		lst/ft_lstadd_front.c	\
+		lst/ft_lstsize.c		\
+		lst/ft_lstlast.c		\
+		lst/ft_lstadd_back.c	\
+		lst/ft_lstdelone.c		\
+		lst/ft_lstclear.c		\
+		lst/ft_lstiter.c		\
+		lst/ft_lstmap.c
+
 		
 SRCS_CFILES := $(addprefix $(SRCS), $(CFILES))
 SRCS_OFILES	:= $(SRCS_CFILES:.c=.o)

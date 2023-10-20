@@ -1,6 +1,13 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}				t_list;
 
 /*
 ** Fill memory with a constant byte.
@@ -128,5 +135,70 @@ char	**ft_split(char const *s, char c);
 ** to be processed.
 */
 char	*ft_itoa(int n);
+/*
+** Applies the function f to each character of the string s
+** to create a new string, allocating memory as a result of
+** successive applications of f.
+*/
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+/*
+** Prints the character c to the stream specified by the file descriptor.
+*/
+void	ft_putchar_fd(char c, int fd);
+/*
+** Prints the string s to the stream specified by the file descriptor.
+*/
+void	ft_putstr_fd(char *s, int fd);
+/*
+** Prints the string s to the stream specified by
+** the file descriptor, followed by a newline.
+*/
+void	ft_putendl_fd(char *s, int fd);
+/*
+** Outputs the integer n to the stream specified by the file descriptor.
+*/
+void	ft_putnbr_fd(int n, int fd);
+/*
+** Returns a new list element.
+*/
+t_list	*ft_lstnew(void *content);
+/*
+** Adds the new element to the beginning of the list.
+*/
+void	ft_lstadd_front(t_list **lst, t_list *new);
+/*
+** Returns the list's size.
+*/
+int		ft_lstsize(t_list *lst);
+/*
+** Returns the last element of the list.
+*/
+t_list	*ft_lstlast(t_list *lst);
+/*
+** Adds the new element to the end of the list.
+*/
+void	ft_lstadd_back(t_list **lst, t_list *new);
+/*
+** Frees memory of the contents of a list element using the del
+** function given as a parameter and frees the element. The memory
+** of the next element of the list should not be freed.
+*/
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+/*
+** Removes and frees the memory of this list's element and all
+** its successors using the del and free functions.
+*/
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+/*
+** Iterates the list lst and applies the f function to the contents of each element.
+*/
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+/*
+** Iterates the list lst and applies the f function to
+** the contents of each element. Creates a new list as
+** a result of successive applications of the f function.
+** The del function is used to remove the contents of an element if necessary.
+*/
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
