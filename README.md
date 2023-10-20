@@ -10,10 +10,11 @@
 > **choco install make**
 
 Полный список команд:
-> **make **
-> **make all**    - собрпеппа все
+> **make **       - собрать библиотеку libft.a
+> **make all**    - собрать библиотеку libft.a
+> **make re**     - пересобрать все содержимое
 > **make clean**  - удалить *.o файлы
-> **make fclean** - удалить *.o файлы и libft.a 
+> **make fclean** - удалить *.o файлы и libft.a
 ---
 
 ### Description
