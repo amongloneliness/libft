@@ -1,25 +1,27 @@
 #include "libft.h"
 
-char *ft_strnstr(const char *s, const char *find, size_t n)
+/*
+** Find the first occurrence of find in s, where the search is limited
+** to the first slen characters of s.
+*/
+char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
-	char c, sc;
-	size_t len;
+	size_t	len;
 
-	if ((c = *find++) != '\0') {
-		len = ft_strlen(find);
-
-		do {
-			do {
-				if (n-- < 1 || (sc = *s++) == '\0')
-					return (char *) (NULL);
-			} while (sc != c);
-
-			if (len > n)
-				return (char *) (NULL);
-		} while (ft_strncmp(s, find, len) != 0);
-
-		s--;
+	if (*needle == '\0')
+	{
+		return ((char *) haystack);
 	}
-
-	return ((char *)s);
+	len = ft_strlen(needle);
+	if (len > n)
+		len = n;
+	while (*haystack && ft_strncmp(haystack, needle, len) != 0)
+	{
+		haystack++;
+	}
+	if (ft_strncmp(haystack, needle, len) == 0)
+	{
+		return ((char *) haystack);
+	}
+	return ((char *) 0);
 }

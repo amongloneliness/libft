@@ -1,6 +1,9 @@
 #include "libft.h"
 
-int ft_isalnum(int c)
+/*
+** Return nonzero if argument is an alphanumeric character, else - 0.
+*/
+int	ft_isalnum(int c)
 {
-    return (ft_isalpha(c) || ft_isdigit(c)) ? 8 : 0;
+	return ((ft_isalpha(c) || ft_isdigit(c)) * 8);
 }

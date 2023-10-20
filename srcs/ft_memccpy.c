@@ -1,16 +1,23 @@
 #include "libft.h"
 
-void *ft_memccpy(void *dest, const void *src, int c, size_t n)
-{   
-    if (n > 0) {
-        unsigned char *cdest = (unsigned char *) dest;
-        const unsigned char *csrc = (unsigned char *) src;
+/*
+** Copy memory to memory until the specified number of bytes has been copied.
+*/
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+{
+	unsigned char		*pointer_dest;
+	const unsigned char	*pointer_src;
 
-        do {
-            if ((*cdest++ = *csrc++) == (unsigned char) c)
-                return (void *) (dest);
-        } while (--n != 0);
-    }
-
-    return ((void *) 0);
+	if (n > 0)
+	{
+		pointer_dest = (unsigned char *) dest;
+		pointer_src = (unsigned char *) src;
+		while (n-- != 0)
+		{
+			if (*pointer_dest == (unsigned char) c)
+				return ((void *) dest);
+			*pointer_dest++ = *pointer_src++;
+		}
+	}
+	return ((void *) 0);
 }

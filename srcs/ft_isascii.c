@@ -1,6 +1,9 @@
 #include "libft.h"
 
-int ft_isascii(int c)
+/*
+** Returns nonzero if c, in the current.
+*/
+int	ft_isascii(int c)
 {
-    return (c <= 127 && c >= 0) ? 1 : 0;
+	return (c <= 127 && c >= 0);
 }

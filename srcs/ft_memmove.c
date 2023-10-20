@@ -1,18 +1,27 @@
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+/*
+** Returns a pointer to dest. copies n bytes from
+** memory area src to memory area dest.
+*/
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-    char *cdest = (char *) dest;
-    const char *csrc = (char *) src;
+	char		*pointer_dest;
+	const char	*pointer_src;
 
-    if (csrc < cdest)  {
-        for (csrc += n, cdest += n; n != 0; --n) {
-            *--cdest = *--csrc;
-        }
-    } else if (src != dest) {
-        for (; n; --n)
-            *cdest++ = *csrc++;
-    }
-
-    return cdest;
+	pointer_dest = (char *) dest;
+	pointer_src = (const char *) src;
+	if (pointer_src < pointer_dest)
+	{
+		pointer_src += n;
+		pointer_dest += n;
+		while (n-- > 0)
+			*--pointer_dest = *--pointer_src;
+	}
+	else if (src != dest)
+	{
+		while (n-- > 0)
+			*pointer_dest++ = *pointer_src++;
+	}
+	return ((void *) pointer_dest);
 }

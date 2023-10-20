@@ -1,10 +1,11 @@
 #include "libft.h"
 
-char *ft_strcpy(char *dst, const char *src)
+/*
+** Copy the string src to dst and return dest.
+*/
+char	*ft_strcpy(char *dst, const char *src)
 {
-    const size_t len = ft_strlen(src);
+	const size_t	len = ft_strlen(src);
 
-    ft_memcpy(dst, src, len + 1);
-
-    return dst;
+	return (ft_memcpy(dst, src, len + 1));
 }

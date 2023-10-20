@@ -1,14 +1,14 @@
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+/*
+** Searches for the first occurence of the character in the string.
+*/
+char	*ft_strchr(const char *s, int c)
 {
-    while ((int) *s != (int) c && *s != '\0') {
-        s++;
-    }
-
-    if (*s == (char) c) {
-        return (char *) s;
-    } else {
-        return (char *) NULL;
-    }
+	while ((int) *s != c && *s != '\0')
+		s++;
+	if (*s == (char) c)
+		return ((char *) s);
+	else
+		return ((char *) 0);
 }

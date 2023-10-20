@@ -1,11 +1,17 @@
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+/*
+** Fill memory with a constant byte.
+*/
+void	*ft_memset(void *s, int c, size_t n)
 {
-    char *p = (char *) s;
+	char	*pointer;
 
-    while (n--) 
-        *p++ = (char) c;
-
-    return s;
+	pointer = (char *) s;
+	if (n != 0)
+	{
+		while (n-- > 0)
+			*pointer++ = (char) c;
+	}
+	return (s);
 }

@@ -1,11 +1,14 @@
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+/*
+** Determine the length of a fixed-size string.
+*/
+size_t	ft_strlen(const char *s)
 {
-    size_t len = 0;
+	size_t	len;
 
-    while (*s++ != '\0')
-        len++;
-
-    return len;
+	len = 0;
+	while (*s++ != '\0')
+		len++;
+	return (len);
 }
