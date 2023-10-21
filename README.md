@@ -9,12 +9,16 @@
 Для этого воспользуйтесь:
 > **choco install make**
 
-Полный список команд:
-> **make **       - собрать библиотеку libft.a 
-> **make all**    - собрать библиотеку libft.a 
-> **make re**     - пересобрать все содержимое 
-> **make clean**  - удалить *.o файлы 
-> **make fclean** - удалить *.o файлы и libft.a 
+### Использование:
+После компиляции закинуть файлы includes/libft.h и libft.a в папку с вашим проектом проектом.
+
+### Список команд:  
+> **make**  
+> **make all**  
+> **make re**  
+> **make clean**  
+> **make fclean**
+
 ---
 
 ### Description
@@ -26,3 +30,13 @@ You can install https://chocolatey.org/install to use the **make** command in **
 
 To do this, use:
 > **choco install make**
+
+### Usage:
+Place the files includes/libft.h and libft.a in the folder with your project.
+
+### Command list:
+> **make**  
+> **make all**  
+> **make re**  
+> **make clean**  
+> **make fclean**
